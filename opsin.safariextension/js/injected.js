@@ -5,12 +5,12 @@ function contextMessage(e) {
     locY = e.clientY + 10;
 	var sel = '';
 	sel = window.parent.getSelection()+'';
-	sel = sel.replace(/^\s+|\s+$/g,"");
+	sel = sel.replace(/^\s+|\s+$/g,'');
 	safari.self.tab.setContextMenuEventUserInfo(e, sel);
 }
 
 function handleMessage(msg) {
-	if (msg.name === "searchResults") {
+	if (msg.name === 'searchResults') {
 		openWindow(msg.message);
 	}
 }
@@ -22,9 +22,8 @@ function openWindow(msg) {
 		$('<link rel="stylesheet" href="'+safari.extension.baseURI+'css/opsin.css">').appendTo('head');
 	}
 	var $popupDiv = $('<div/>').appendTo('body'),
-		imgString = '<img src="http://opsin.ch.cam.ac.uk/opsin/'+encodeURIComponent(msg)+'.png">'
-	
-	$img = $(imgString).appendTo($popupDiv);
+		imgString = '<img src="http://opsin.ch.cam.ac.uk/opsin/'+encodeURIComponent(msg)+'.png">',
+		$img = $(imgString).appendTo($popupDiv);
 	
 	$popupDiv.dialog({
 		position: [locX,locY],
@@ -32,13 +31,13 @@ function openWindow(msg) {
 		title: 'OPSIN',
 		buttons: [
 			{text: 'SMILES', 'class':'__opsin-dialog-button', click: function() { 
-				location.href = "http://opsin.ch.cam.ac.uk/opsin/"+encodeURIComponent(msg)+".smi";
+				location.href = 'http://opsin.ch.cam.ac.uk/opsin/'+encodeURIComponent(msg)+'.smi';
 			}},
 			{text: 'InChi', 'class':'__opsin-dialog-button', click: function() {
-				location.href = "http://opsin.ch.cam.ac.uk/opsin/"+encodeURIComponent(msg)+".inchi";
+				location.href = 'http://opsin.ch.cam.ac.uk/opsin/'+encodeURIComponent(msg)+'.inchi';
 			}},
 			{text: 'CML', 'class':'__opsin-dialog-button', click: function() {
-				location.href = "http://opsin.ch.cam.ac.uk/opsin/"+encodeURIComponent(msg)+".cml";
+				location.href = 'http://opsin.ch.cam.ac.uk/opsin/'+encodeURIComponent(msg)+'.cml';
 			}},
 		]
 	});
@@ -48,7 +47,7 @@ function openWindow(msg) {
 		$popupDiv.dialog({
 			buttons: [
 				{text: 'Close', 'class':'__opsin-dialog-button', click: function() {
-					$(this).dialog("close"); 
+					$(this).dialog('close'); 
 				}},
 			]
 		});

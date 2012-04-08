@@ -2,7 +2,7 @@ function performCommand(e) {
 	if (e.command !== 'opsin')
 		return;
 	var selection = e.userInfo;
-	safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("searchResults", selection);
+	app.activeBrowserWindow.activeTab.page.dispatchMessage('searchResults', selection);
 }
 
 function validateCommand(e) {
@@ -21,7 +21,6 @@ function validateCommand(e) {
 	e.target.title = 'Display "'+selection+'" using OPSIN'; 
 }
 
-const app = safari.application,
-	  ext  = safari.extension;
+const app = safari.application;
 app.addEventListener('command', performCommand, false);
 app.addEventListener('validate', validateCommand, false);
