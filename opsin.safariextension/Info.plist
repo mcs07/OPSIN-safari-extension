@@ -4,6 +4,8 @@
 <dict>
 	<key>Author</key>
 	<string>Matt Swain</string>
+	<key>Builder Version</key>
+	<string>7536.2.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>OPSIN Search</string>
 	<key>CFBundleIdentifier</key>
@@ -36,7 +38,13 @@
 		<dict>
 			<key>End</key>
 			<array>
-				<string>opsin.js</string>
+				<string>js/injected.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>js/jquery-1.7.1.min.js</string>
+				<string>js/jquery-ui-1.8.13.custom.min.js</string>
+				<string>js/jquery.scrollTo-1.4.2-min.js</string>
 			</array>
 		</dict>
 	</dict>
