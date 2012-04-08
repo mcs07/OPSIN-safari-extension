@@ -25,4 +25,3 @@ const app = safari.application,
 	  ext  = safari.extension;
 app.addEventListener('command', performCommand, false);
 app.addEventListener('validate', validateCommand, false);
-app.addEventListener('message', handleMessage, false);
