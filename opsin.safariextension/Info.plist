@@ -9,7 +9,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>OPSIN Search</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.macosxtips.opsin</string>
+	<string>com.matt-swain.opsin</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -26,7 +26,7 @@
 				<key>Identifier</key>
 				<string>opsin</string>
 				<key>Title</key>
-				<string>OPSIN Search</string>
+				<string>Refresh to use OPSIN search</string>
 			</dict>
 		</array>
 		<key>Global Page</key>
@@ -44,7 +44,6 @@
 			<array>
 				<string>js/jquery-1.7.1.min.js</string>
 				<string>js/jquery-ui-1.8.13.custom.min.js</string>
-				<string>js/jquery.scrollTo-1.4.2-min.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -63,8 +62,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://www.macosxtips.co.uk/extensions/opsin.plist</string>
+	<string>http://assets.matt-swain.com/extensions/opsin.plist</string>
 	<key>Website</key>
-	<string>http://www.macosxtips.co.uk/extensions</string>
+	<string>http://matt-swain.com/extensions</string>
 </dict>
 </plist>
